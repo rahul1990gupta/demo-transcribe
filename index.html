@@ -14,7 +14,7 @@
             speechRecognition = new webkitSpeechRecognition();
             speechRecognition.onresult = function(event) {
                 var transcript = event.results[0][0].transcript;
-                displayResult.innerHTML = "You Said: " + transcript;
+                displayResult.innerText = "You Said: " + transcript;
             };
         function record(){
 
@@ -24,12 +24,12 @@
         </script>
         <div align="center">
              <!-- <input type="submit", value="Record!" onClick="record()"> -->
-             <p> Click below to speak! </p>
+             <p style="font-size: 20px"> Click below to speak! </p>
              <div onclick="record()">
-                <i class="fas fa-microphone" style="color:red !important"></i>
+                <i class="fas fa-microphone" style="color:red !important; font-size: 50px"></i>
             </div>
             
-            <p id="displayResult"> </p> 
+            <p id="displayResult" style="font-size: 20px"> </p> 
         </div>
     </body>
 </html>
